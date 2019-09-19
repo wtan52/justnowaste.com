@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JustNoWate</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/autocomplete.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="js/jquery.min.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            var availableTags = ['Campbellfield', 'Clayton South', 'Braeside', 'Merricks',
+                'Dandenong', 'Fyansford', 'Batesford', 'Dandenong South',
+                'Eaglehawk', 'Geelong North', 'Korumburra', 'Lake Bolac',
+                'Portland', 'Seymour', 'Shepparton', 'Stawell', 'Thomastown',
+                'Port Melbourne', 'Werribee', 'Altona ', 'Traralgon', 'Somerton',
+                'Altona', 'Lara', 'Springvale', 'Goornong', 'Sunshine',
+                'Yarraville', 'Moolap', 'Anglesea', 'Point Henry',
+                'Laverton North', 'Prahran', 'Caulfield', 'Ararat', 'Bairnsdale',
+                'Wangaratta', 'Myrtleford', 'Porepunkah', 'Footscray', 'Mulgrave',
+                'Moorabbin', 'Mitcham', 'Oakleigh', 'Preston', 'Wendouree',
+                'Box Hill South', 'Alphington', 'Cheltenham', 'Corio',
+                'Berriwillock', 'Irymple', 'Dingley', 'Melbourne Airport',
+                'Tullamarine', 'Brooklyn', 'Euroa ', 'Moe', 'Waarre ', 'Koroit',
+                'Kyneton', 'Springhurst', 'Wollert', 'Lakes Entrance', 'Orbost',
+                'Sale', 'Manangatang', 'Trentham', 'Burwood', 'Lyndhurst',
+                'Laverton', 'Box Hill', 'Swan Hill', 'Colac', 'Yarram',
+                'Heidelberg', 'Heidelberg West', 'Morwell', 'Simpson', 'Deer Park',
+                'Newbridge', 'Pyramid Hill', 'Colignan', 'Merbein',
+                'Geelong South', 'Ballarat', 'Williamstown', 'Devon Meadows',
+                'Lethbridge', 'Strathmerton', 'Stewarton', 'Nagambie',
+                'Wandin East', 'North Shore', 'Maiden Gully', 'Echuca',
+                'Smythesdale', 'Mt Clear', 'Collingwood', 'Richmond', 'Burnley',
+                'Wodonga', 'Donnybrook', 'Point Wilson', 'Wyndham Vale', 'Kealba',
+                'Aireys Inlet', 'Apollo Bay', 'Bannockburn', 'Connewarre',
+                'Elliminyt', 'Lorne', 'She Oaks', 'Portarlington', 'Wurdiboluc',
+                'Grantville', 'Lardner', 'Trafalgar', 'Warrnambool',
+                'Nirranda South', 'Lang Lang', 'Port Campbell', 'Coburg North',
+                'Wemen', 'Bendigo', 'Yarra Glen', 'Great Western', 'Castlemaine',
+                'Barnawartha', 'Avoca', 'Clayton', 'Hastings', 'Tyabb', 'Nirranda',
+                'Altona North', 'Mansfield', 'Myrtleford  ', 'Hoddles Creek',
+                'Camperdown', 'Drouin', 'Toora', 'Hamilton', 'Horsham',
+                'Dennington', 'Waurn Ponds', 'Scoresby', 'Truganina', 'Montrose',
+                'Bacchus Marsh', 'Lysterfield', 'Epping', 'Charlton', 'Lilydale',
+                'Dunnstown', 'Cosgrove South', 'Langwarrin', 'Cosgrove',
+                'Yallourn North', 'Harrietville', 'Fulham', 'Mangalore',
+                'Moorabbin Airport', 'Portland Junction', 'Yarpturk',
+                'Essendon Fields', 'Breakwater', 'Cranbourne South', 'Milawa',
+                'Emu', 'Coburg', 'Hawthorn East', 'Malvern', 'Notting Hill',
+                'Newport', 'Benalla', 'St Arnaud', 'Corryong', 'Kyabram',
+                'Mildura', 'Yarrawonga', 'Warragul', 'Rowville', 'Wantirna South',
+                'Lemnos', 'Rutherglen', 'Delacombe', 'Footscray West',
+                'Hazelwood North', 'Glenrowan', 'Cranbourne', 'Craigieburn',
+                'Rockbank', 'Hampton Park', 'Maffra', 'Dutson', 'Giffard',
+                'Carisbrook', 'Bentleigh East', 'Altona Meadows',
+                'North Melbourne', 'Wahgunyah', 'Bayswater', 'Heathcote', 'Epsom',
+                'Rochester', 'Bayswater North ', 'Maidstone', 'Naroghid',
+                'Murchison East', 'Geelong East', 'Belmont', 'Broadmeadows',
+                'Parkville', 'Vermont', 'Abbotsford', 'Bridgewater On Loddon',
+                'Kilsyth', 'Tongala', 'Nunawading', 'Dixons Creek', 'Croydon',
+                'Queenscliff', 'Crib Point', 'East Sale', 'Yallambie', 'Southbank',
+                'Leongatha', 'Shepparton North', 'Tatura', 'Coldstream',
+                'West Melbourne', 'Glen Waverley', 'Mickleham', 'Newtown',
+                'Newmerella', 'Forge Creek', 'Ferntree Gully', 'Ringwood East',
+                'Narre Warren', 'Moorooduc', 'Hallam', 'Brunswick', 'Lucknow',
+                'Echuca ', 'Lockwood', 'Warrnambool ', 'Wodonga  ', 'Woodend',
+                'Albion', 'Northcote', 'Croydon South', 'Longford', 'Golden Beach',
+                'Marong', 'Tottenham', 'Mount Helen', 'Braybrook',
+                'Oakleigh South', 'Melton', 'Delcombe', 'Bayswater North',
+                'Cobden', 'Cororooke', 'Darnum', 'Stanhope', 'Norlane',
+                'Airport West', 'Fosterville', 'Avenel', 'Westall', 'Tylden',
+                'Tynong', 'Pakenham', 'Blackburn', 'Kerang', 'Piangil',
+                'North Geelong', 'Noble Park North', 'Healesville', 'Boronia',
+                'St Arnaud North', 'Shepparton ', 'Alexandra', 'Broadford',
+                'Cobram', 'Eildon', 'Kilmore', 'Mooroopna', 'Nathalia', 'Numurkah',
+                'Tallarook', 'Wallan', 'Fawkner', 'Allansford', 'Drysdale',
+                'Hoppers Crossing', 'Dartmoor', 'Leitchville', 'West Footscray ',
+                'Heyfield', 'Girgarre', 'Mill Park', 'Noble Park', 'Harkaway',
+                'Axedale', 'Breakaway Creek', 'Mambourin', 'Prairie', 'Mentone',
+                'Daylesford', 'Ondit ', 'Leongatha South', 'Moriac',
+                'Oaklands Junction', 'Tarrone', 'Sunbury', 'Maribyrnong',
+                'Peechelba', 'Douglas', 'Ouyen', 'Linton', 'Yannathan', 'Clyde',
+                'Somerville', 'Pakenham South', 'Nar Nar Goon', 'Yellingbo',
+                'Donald', 'Cann River', 'Lake Gardens', 'Koo Wee Rup', 'Thornbury',
+                'Bundoora', 'Loy Yang', 'Newborough', 'Yinnar', 'Mount Waverley',
+                'Laverton North ', 'Geelong South ', 'Chelsea Heights',
+                'Eaglehawk, Bendigo', 'Rye', 'Koorlong', 'Cullellerain',
+                'Robinvale', 'Nhill', 'Lancefield', 'Bullengarook', 'Costerfield',
+                'Bangholme', 'Kensington', 'Dromana', 'South Yarra', 'Emerald',
+                'Greenvale', 'Reservoir', 'Silvan ', 'Drouin West',
+                'Christmas Hills', 'Spotswood', 'Balmoral', 'Goroke', 'Berwick',
+                'Caulfield East', 'Churchill', 'Ringwood', 'Katunga', 'Winton',
+                'Maddingley', 'Ballan', 'Wunghnu', 'Maryborough',
+                'Kangaroo Ground', 'Yarrambat', 'Waaia', 'Keon Park', 'Baranduda',
+                'Wooragee', 'Mt Beauty', 'Wangaratta ', 'Broadmeadows ',
+                'Traralgon East', 'Huntingdale', 'Seaford', 'Mortlake', 'Timboon',
+                'Patho', 'Frankston', 'Lockington', 'Melbourne', 'Mount Evelyn',
+                'Wantirna', 'Euroa', 'Heywood', 'Sunshine West', 'Seville',
+                'Tullamarine Airport', 'Ballarat East', 'Barry Beach', 'Beverford',
+                'Bamawm', 'Moonambel', 'Yarra Junction', 'Cohuna', 'Gunbower',
+                'Terang', 'Gre Gre', 'Huntly', 'Casterton', 'Bandiana', 'Rosedale',
+                'Pine Lodge', 'Leithbridge', 'Oxley', 'Tangambalanga',
+                'Beechworth', 'Buchan', 'Knoxfield', 'Branxholme', 'Blind Bight',
+                'Boneo', 'Longwarry', 'Mount Martha', 'Somers', 'Welshpool',
+                'Tarwin', 'Foster', 'Wonthaggi', 'Koonwarra', 'Heytesbury Lower',
+                'Bridgewater', 'Dandenong South ', 'Port Fairy', 'Clifton Hill',
+                'Paradise', 'Lance Creek', 'Tabilk', 'Seaspray', 'Yeungroon',
+                'Newham', 'East Melbourne', 'Carlton', 'Essendon',
+                'North Melbourne ', 'Karadoc', 'Geelong', 'Fitzroy',
+                'Kangaroo Flat', 'Geelong West', 'Murchison', 'Keysborough',
+                'Ballarat North', 'Tourello', 'Kingston', 'Bungal', 'Glen Park',
+                'Gapsted', 'Coolaroo', 'Carrum Downs', 'Bell Park', 'Bowser',
+                'Kilmany', 'Boisdale', 'Flemington', 'Wandin North', 'St Albans',
+                'Gisborne', 'Melton South', 'Parwan', 'Romsey', 'Cowes', 'Iraak',
+                'Peterborough', 'Essendon Airport', 'Mildura South', 'Yan Yean',
+                'Chirnside Park', 'Launching Place', 'Whittlesea'
+            ];
+            $("#tags").autocomplete({
+                focus: function(event, ui) {
+                    this.value = ui.item.label;
+                    // or $('#autocomplete-input').val(ui.item.label);
+
+                    // Prevent the default focus behavior.
+                    event.preventDefault();
+                    // or return false;
+                },
+                source: availableTags
+            });
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/">JustNoWaste</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="statistics.html" class="nav-link">Statistics</a></li>
+                    <li class="nav-item"><a href="impacts.html" class="nav-link">Impacts</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+
+    <div class="hero-wrap ftco-degree-bg" style="background-image: url('images/slider.jpg');" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text justify-content-center align-items-center">
+                <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-end">
+                    <div class="text text-center">
+                        <h1 class="mb-4">Industrial Waste Management</h1>
+                        <p style="font-size: 22px; color: white;">Let's make our Victoria free from industrial wastes.</p>
+                        <form id="myForm" action="/MapSearch.html#MapSection" method="get" onsubmit="return validate_activity()" class="search-location mt-md-5">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10 align-items-end">
+                                    <div class="form-group">
+                                        <div class="form-field">
+                                            <div class="ui-widget">
+                                                <input id="tags" type="text" name="mySuburb" class="form-control" placeholder="Search location" required>
+                                            </div>
+                                            <button type="submit" onclick="validate_activity()"><span class="ion-ios-search"></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="classifi_point" class="ftco-section ftco-no-pb">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+                    <span class="subheading">Impacts on the environment</span>
+                    <h2 class="mb-2">Classifications of Emissions and their impacts</h2>
+                </div>
+            </div>
+            <div class="row d-flex">
+                <div class="col-md-4">
+                    <div class="find-place-img_wrap">
+                        <div class="grid">
+                            <figure class="effect-ruby">
+                                <a href="classification.html?target=Total_Land_Waste_Amount">
+                                    <img src="images/find-place1.jpg" class="img-fluid" alt="Land">
+                                <figcaption>
+                                <h5>Land Waste</h5>
+                                <p>385 Listings</p>
+                                </figcaption></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row find-img-align">
+                        <div class="col-md-12">
+                            <div class="find-place-img_wrap">
+                                <div class="grid">
+                                    <figure class="effect-ruby">
+                                        <a href="classification.html?target=Total_Air_Fugitive_Waste_Amount">
+                                            <img src="images/airwaste.jpg" class="img-fluid" alt="air_fugitive">
+                                        <figcaption>
+                                        <h5>Air Fugitive Waste</h5>
+                                        <p>210 Listings</p>
+                                        </figcaption></a>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="find-place-img_wrap">
+                                <div class="grid">
+                                    <figure class="effect-ruby">
+                                        <a href="classification.html?target=Total_Air_Point_Waste_Amount">
+                                            <img src="images/airpoint.jpg" class="img-fluid" alt="air_point">
+                                        <figcaption>
+                                        <h5>Air Point Waste</h5>
+                                        <p>114 Listings</p>
+                                        </figcaption></a>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row find-img-align">
+                        <div class="col-md-12">
+                            <div class="find-place-img_wrap">
+                                <div class="grid">
+                                    <figure class="effect-ruby">
+                                        <a href="classification.html?target=Total_Air_Waste_Amount">
+                                            <img src="images/find-place4.jpg" class="img-fluid" alt="air_waste">
+                                        <figcaption>
+                                        <h5>Air Waste</h5>
+                                        <p>577 Listings</p>
+                                        </figcaption></a>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="find-place-img_wrap">
+                                <div class="grid">
+                                    <figure class="effect-ruby">
+                                        <a href="classification.html?target=Total_Air_Waste_Amount">
+                                            <img src="images/find-place2.jpg" class="img-fluid" alt="water_waste">
+                                        <figcaption>
+                                        <h5>Water Waste</h5>
+                                        <p>79 Listings</p>
+                                        </figcaption></a>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="pb_footer">
+        <a href="#" class="mouse-icon">
+            <div class="mouse-wheel"><span class="ion-ios-arrow-round-up"></span></div>
+        </a>
+    </div>
+
+    <footer class="pb_footer bg-light" role="contentinfo">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <ul class="list-inline">
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <p class="pb_font-14">&copy; 2019. All Rights Reserved. <br>
+                        <p>Project created by <span style="color:#e86ed0">JustS</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg>
+    </div>
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
